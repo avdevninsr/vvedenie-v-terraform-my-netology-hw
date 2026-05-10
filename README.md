@@ -90,7 +90,7 @@ tankist@docker-vm:~/vvedenie_v_terraform$ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                  NAMES
 34e5c53634ab   a7a9f7e9f549   "/docker-entrypoint.…"   57 seconds ago   Up 56 seconds   0.0.0.0:9090->80/tcp   hello_world
 ```
-Ключ auto-approve автоматичсеки применяем новое описание в манифестах к сущесвующей конфигурации без потверждения. В практике такое лучше использовать либо в тестовых средах, либо во всяких CI/CD для автоматического аппрува изменения конфигурации.</br>
+Ключ auto-approve автоматичсеки применяет новое описание в манифестах к существующей конфигурации без потверждения. На практике такое лучше использовать либо в тестовых средах, либо во всяких CI/CD для автоматического аппрува изменения конфигурации.</br>
 Уничтожаем инфраструктуру командой terraform destroy:
 ```
 tankist@docker-vm:~/vvedenie_v_terraform$ terraform destroy
