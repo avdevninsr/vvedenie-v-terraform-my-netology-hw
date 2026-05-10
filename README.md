@@ -44,7 +44,7 @@ commands will detect it and remind you to do so if necessary.
 
 <img src="files/secret.PNG" alt="Рисунок 1.1" width="auto" height="auto"></br>
 Рисунок 1.1. Файл .gitignore</br>
-После команды terraform apply получаем секретное значение random_password, оно лежит в файлике terraform.tfstate
+После команды terraform apply получаем секретное значение random_password, оно лежит в файле terraform.tfstate
 
 <img src="files/secret_result.PNG" alt="Рисунок 1.2" width="auto" height="auto"></br>
 Рисунок 1.2. Секретное значение в файле .tfstate</br>
@@ -90,7 +90,7 @@ tankist@docker-vm:~/vvedenie_v_terraform$ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                  NAMES
 34e5c53634ab   a7a9f7e9f549   "/docker-entrypoint.…"   57 seconds ago   Up 56 seconds   0.0.0.0:9090->80/tcp   hello_world
 ```
-Ключ auto-approve автоматичсеки применяем новое описание в манифестах к сущесвующей конфигурации без потверждения. В практике такое лучше использовать либо в тестовых средах, либо во всяких CI/CD для автоматического аппрува изменения конфигурации.</br>
+Ключ auto-approve автоматически применяет новое описание в манифестах к существующей конфигурации без потверждения. На практике такое лучше использовать либо в тестовых средах, либо во всяких CI/CD для автоматического аппрува при изменении конфигурации.</br>
 Уничтожаем инфраструктуру командой terraform destroy:
 ```
 tankist@docker-vm:~/vvedenie_v_terraform$ terraform destroy
@@ -226,3 +226,4 @@ nginx:latest                 a7a9f7e9f549        240MB         65.8MB
 ```
 [Параметр keep_locally является логическим и может принимать два значения -  true и false. Если значение true, то Docker образ не будет удалён при операции destroy. Если значение false, то образ будет удалён из локального хранилища docker при операции destroy](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs/resources/image).</br>
 Файлы терраформ проекта после выполнения данного задания находятся [здесь](files/vvedenie_v_terraform/).
+Поскольку .gitignore не позволит добавить файлы с расширениями .tfstate я добавил их в отдельную [папку](files/%D1%81%D1%82%D0%B5%D0%B9%D1%82%D1%8B/).
