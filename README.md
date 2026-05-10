@@ -225,5 +225,5 @@ hashicorp/terraform:latest   c89ed543266c        198MB         50.4MB
 nginx:latest                 a7a9f7e9f549        240MB         65.8MB
 ```
 [Параметр keep_locally является логическим и может принимать два значения -  true и false. Если значение true, то Docker образ не будет удалён при операции destroy. Если значение false, то образ будет удалён из локального хранилища docker при операции destroy](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs/resources/image).</br>
-Файлы терраформ проекта после выполнения данного задания находятся [здесь](files/vvedenie_v_terraform/).
+Файлы терраформ проекта после выполнения данного задания находятся [здесь](files/vvedenie_v_terraform/).</br>
 Поскольку .gitignore не позволит добавить файлы с расширениями .tfstate я добавил их в отдельную [папку](files/%D1%81%D1%82%D0%B5%D0%B9%D1%82%D1%8B/).
